@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FBFAF8;
+    color: #4A4A4A;
+    overflow-x: hidden;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  ::selection {
+    background-color: #9A9F7A;
+    color: #FFFFFF;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9A9F7A;
+    margin-bottom: 16px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #D8CFC4;
+    max-width: 120px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background-color: #9A9F7A;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #7D8462;
+    transform: scale(1.02);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background-color: transparent;
+    color: #6E6259;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border: 1.5px solid #6E6259;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: #6E6259;
+    color: #FFFFFF;
+    transform: scale(1.02);
+  }
+
+  /* Expanding fill from center — the signature hover effect */
+  .expand-fill {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .expand-fill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #9A9F7A;
+    clip-path: inset(50% 0);
+    transition: clip-path 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 0;
+  }
+
+  .expand-fill:hover::before {
+    clip-path: inset(0);
+  }
+
+  .expand-fill > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .expand-fill:hover .expand-fill-text {
+    color: #FFFFFF !important;
+    transition: color 0.4s ease;
+  }
+
+  .expand-fill:hover .expand-fill-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.4s ease;
+  }
+
+  .expand-fill-text,
+  .expand-fill-muted {
+    transition: color 0.4s ease;
+  }
+
+  .grain-overlay {
+    position: relative;
+  }
+
+  .grain-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
