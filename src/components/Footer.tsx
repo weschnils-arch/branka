@@ -34,7 +34,7 @@ export function Footer() {
             <img
               src={logoLight}
               alt="BN Coaching & Health"
-              className="h-12 md:h-14 w-auto"
+              className="h-16 md:h-20 w-auto"
               style={{ filter: 'brightness(0) invert(1) sepia(0.15) saturate(1.5) hue-rotate(340deg) opacity(0.9)' }}
             />
           </a>
