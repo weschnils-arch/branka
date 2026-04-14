@@ -114,7 +114,7 @@ export function Hero() {
         <img
           src={heroImage}
           alt="Branka Njegovec performing a dramatic wide pose at a professional bodybuilding competition"
-          className="w-full h-full object-cover object-[center_60%]"
+          className="w-full h-full object-cover object-[center_30%] md:object-[center_60%]"
           style={{ filter: 'saturate(0.9) contrast(1.1) brightness(0.85)' }}
         />
       </div>
@@ -122,7 +122,7 @@ export function Hero() {
       {/* Vignette overlay — edges only, not a wash */}
       <div data-hero="vignette" className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 30%, rgba(42,38,34,0.5) 100%)' }} />
-        <div className="absolute bottom-0 left-0 right-0 h-[35%]" style={{ background: 'linear-gradient(to top, rgba(42,38,34,0.7) 0%, transparent 100%)' }} />
+        <div className="absolute bottom-0 left-0 right-0 h-[50%] md:h-[35%]" style={{ background: 'linear-gradient(to top, rgba(42,38,34,0.85) 0%, rgba(42,38,34,0.4) 50%, transparent 100%)' }} />
         <div className="absolute top-0 left-0 right-0 h-[15%]" style={{ background: 'linear-gradient(to bottom, rgba(42,38,34,0.3) 0%, transparent 100%)' }} />
       </div>
 
