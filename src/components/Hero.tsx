@@ -130,7 +130,7 @@ export function Hero() {
       <div className="absolute inset-0 grain-overlay pointer-events-none" />
 
       {/* Main content — centered, magazine cover style */}
-      <div data-hero="content" className="relative z-10 h-full flex flex-col justify-start pt-24 md:justify-end md:pt-0 pb-16 md:pb-20 will-change-transform">
+      <div data-hero="content" className="relative z-10 h-full flex flex-col justify-start pt-20 md:justify-end md:pt-0 pb-16 md:pb-20 will-change-transform">
         <div className="mx-auto max-w-[1280px] w-full px-5 md:px-10 lg:px-20">
 
           {/* Giant title — magazine cover style */}
@@ -138,7 +138,7 @@ export function Hero() {
             <div className="overflow-hidden">
               <p
                 data-hero="title-1"
-                className="text-[clamp(52px,10vw,150px)] font-black leading-[0.85] tracking-[-0.05em] text-[#FBFAF8] mix-blend-normal"
+                className="text-[clamp(42px,10vw,150px)] font-black leading-[0.85] tracking-[-0.05em] text-[#FBFAF8] mix-blend-normal"
                 style={{ textShadow: '0 4px 40px rgba(0,0,0,0.3)' }}
               >
                 BUILT BY
@@ -147,7 +147,7 @@ export function Hero() {
             <div className="overflow-hidden">
               <p
                 data-hero="title-2"
-                className="text-[clamp(52px,10vw,150px)] font-black leading-[0.85] tracking-[-0.05em] text-[#9A9F7A] whitespace-nowrap"
+                className="text-[clamp(42px,10vw,150px)] font-black leading-[0.85] tracking-[-0.05em] text-[#9A9F7A]"
                 style={{ textShadow: '0 4px 40px rgba(0,0,0,0.3)' }}
               >
                 CONSISTENCY
@@ -158,7 +158,7 @@ export function Hero() {
           {/* Subline + CTAs */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <p data-hero="sub" className="text-[clamp(14px,1.2vw,17px)] leading-[1.6] text-[#D8CFC4] max-w-[420px] mb-5">
+              <p data-hero="sub" className="text-[clamp(14px,1.2vw,17px)] leading-[1.6] text-[#D8CFC4] max-w-[420px] mb-4">
                 Professional coaching for lasting physical development, long-term health, and mental resilience. Founded by IFBB Pro athlete Branka Njegovec.
               </p>
 
