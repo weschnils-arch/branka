@@ -172,8 +172,8 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Trust bar — right aligned on desktop */}
-            <div data-hero="trust-bar" className="flex items-center gap-4 md:gap-6">
+            {/* Trust bar — right aligned on desktop, hidden on mobile (shown below) */}
+            <div data-hero="trust-bar" className="hidden md:flex items-center gap-6">
               {[
                 { val: 'IFBB', label: 'Pro' },
                 { val: '5th', label: 'Olympia' },
@@ -182,11 +182,28 @@ export function Hero() {
               ].map((item, i) => (
                 <div key={i} className="text-center">
                   <p className="text-[clamp(18px,2vw,26px)] font-extrabold text-[#FBFAF8] leading-none">{item.val}</p>
-                  <p className="text-[9px] md:text-[10px] font-semibold tracking-[0.1em] uppercase text-[#9A9F7A] mt-1">{item.label}</p>
+                  <p className="text-[10px] font-semibold tracking-[0.1em] uppercase text-[#9A9F7A] mt-1">{item.label}</p>
                 </div>
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Trust bar — pinned to bottom on mobile */}
+      <div data-hero="trust-bar" className="md:hidden absolute bottom-14 left-0 right-0 z-20">
+        <div className="mx-auto max-w-[1280px] px-5 flex items-center justify-center gap-6">
+          {[
+            { val: 'IFBB', label: 'Pro' },
+            { val: '5th', label: 'Olympia' },
+            { val: '4x', label: 'EU Champ' },
+            { val: '20+', label: 'Years' },
+          ].map((item, i) => (
+            <div key={i} className="text-center">
+              <p className="text-[20px] font-extrabold text-[#FBFAF8] leading-none">{item.val}</p>
+              <p className="text-[9px] font-semibold tracking-[0.1em] uppercase text-[#9A9F7A] mt-1">{item.label}</p>
+            </div>
+          ))}
         </div>
       </div>
 
