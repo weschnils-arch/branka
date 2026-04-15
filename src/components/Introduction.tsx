@@ -24,7 +24,7 @@ export function Introduction() {
 
           <div data-animate="fade-up" className="space-y-5 mb-8">
             <p className="text-[clamp(16px,1.3vw,19px)] leading-[1.7] text-[#7A7470]">
-              At BN Coaching & Health, training is a structured, disciplined, and sustainable process — built on expertise, real-world experience, and a clear purpose.
+              At BN Coaching & Health, training is more than physical transformation. It is a structured, disciplined, and sustainable process — built on expertise, real-world experience, and a clear purpose.
             </p>
             <p className="text-[clamp(16px,1.3vw,19px)] leading-[1.7] text-[#7A7470]">
               Founded by professional athlete and coach Branka Njegovec, BN Coaching & Health is a performance-driven coaching concept designed to support individuals in achieving lasting physical development, long-term health, and mental resilience. At the same time, BN Coaching & Health provides elite-level coaching for competitive bodybuilding athletes who aim to reach peak contest condition.
