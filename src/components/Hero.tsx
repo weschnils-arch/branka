@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowDown } from 'lucide-react'
@@ -101,7 +102,7 @@ export function Hero() {
   }, [])
 
   const scrollToAbout = () => {
-    document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
+    document.querySelector('#intro')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -138,19 +139,19 @@ export function Hero() {
             <div className="overflow-hidden">
               <p
                 data-hero="title-1"
-                className="text-[clamp(42px,10vw,150px)] font-black leading-[0.85] tracking-[-0.05em] text-[#FBFAF8] mix-blend-normal"
+                className="text-[clamp(38px,9vw,140px)] font-black leading-[0.9] tracking-[-0.04em] text-[#FBFAF8] mix-blend-normal"
                 style={{ textShadow: '0 4px 40px rgba(0,0,0,0.3)' }}
               >
-                BUILT BY
+                WELCOME TO
               </p>
             </div>
             <div className="overflow-hidden">
               <p
                 data-hero="title-2"
-                className="text-[clamp(42px,10vw,150px)] font-black leading-[0.85] tracking-[-0.05em] text-[#9A9F7A]"
+                className="text-[clamp(38px,9vw,140px)] font-black leading-[0.9] tracking-[-0.04em] text-[#9A9F7A]"
                 style={{ textShadow: '0 4px 40px rgba(0,0,0,0.3)' }}
               >
-                CONSISTENCY
+                BN COACHING &amp; HEALTH
               </p>
             </div>
           </div>
@@ -158,17 +159,17 @@ export function Hero() {
           {/* Subline + CTAs */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <p data-hero="sub" className="text-[clamp(14px,1.2vw,17px)] leading-[1.6] text-[#D8CFC4] max-w-[420px] mb-4">
-                Professional coaching for lasting physical development, long-term health, and mental resilience. Founded by IFBB Pro athlete Branka Njegovec.
+              <p data-hero="sub" className="text-[clamp(14px,1.2vw,17px)] leading-[1.6] text-[#D8CFC4] max-w-[520px] mb-4 italic">
+                Powered by B.P.P. d.o.o. — The Body Progress Principle
               </p>
 
               <div className="flex flex-wrap gap-3">
-                <a href="#booking" data-hero="cta" className="btn-primary" onClick={(e) => { e.preventDefault(); document.querySelector('#booking')?.scrollIntoView({ behavior: 'smooth' }) }}>
+                <Link to="/contact" data-hero="cta" className="btn-primary">
+                  Contact Now
+                </Link>
+                <Link to="/contact#book" data-hero="cta" className="btn-secondary !border-[#FBFAF8]/30 !text-[#FBFAF8] hover:!bg-[#FBFAF8]/10">
                   Book a Session
-                </a>
-                <a href="#services" data-hero="cta" className="btn-secondary !border-[#FBFAF8]/30 !text-[#FBFAF8] hover:!bg-[#FBFAF8]/10" onClick={(e) => { e.preventDefault(); document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' }) }}>
-                  Explore Services
-                </a>
+                </Link>
               </div>
             </div>
 

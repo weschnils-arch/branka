@@ -8,7 +8,7 @@ const pillars = [
 
 export function Introduction() {
   return (
-    <section id="about" className="py-24 md:py-32 lg:py-40 grain-overlay">
+    <section id="intro" className="py-24 md:py-32 lg:py-40 grain-overlay">
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-20">
         <div className="max-w-[720px] mx-auto text-center">
           <p data-animate="fade-up" className="section-label justify-center">
