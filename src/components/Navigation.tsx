@@ -65,12 +65,12 @@ export function Navigation() {
             : 'bg-transparent'
         )}
       >
-        <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-20 flex items-center justify-between h-[60px] md:h-[72px]">
+        <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-20 flex items-center justify-between h-[76px] md:h-[92px]">
           <Link to="/" className="flex-shrink-0" aria-label="BN Coaching & Health home">
             <img
               src={logoWebp}
               alt="BN Coaching & Health"
-              className={clsx('h-14 md:h-16 w-auto transition-all duration-300', !forceDark && 'brightness-[2] contrast-[0.8]')}
+              className={clsx('h-20 md:h-24 w-auto transition-all duration-300', !forceDark && 'brightness-[2] contrast-[0.8]')}
             />
           </Link>
 
