@@ -1,12 +1,13 @@
 import trainingImg from '../assets/images/stock/training-services.webp'
 import coachingImg from '../assets/images/stock/coaching.webp'
 import personalImg from '../assets/images/stock/personal-training.webp'
+import bookImg from '../assets/images/stock/book-session.webp'
 
 export type ServiceDetail = {
   slug: string
   title: string
-  image: string | null
-  imagePlaceholder?: string
+  image: string
+  isPlaceholder?: boolean
   text: string
   bulletLabel?: string
   bullets: string[]
@@ -75,8 +76,8 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: 'online-training',
     title: 'Online Training',
-    image: null,
-    imagePlaceholder: 'Woman in sportswear — placeholder until final photo is available.',
+    image: coachingImg,
+    isPlaceholder: true,
     text: 'BN Coaching & Health offers professional online coaching services that extend beyond the local market. Online training is structured, personalized, and performance-driven — not generic programs. Clients receive individualized training plans, nutrition guidance, regular progress evaluations, and continuous communication.',
     bulletLabel: 'Online training is suitable for:',
     bullets: [
@@ -94,8 +95,8 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: 'corporate-health',
     title: 'Corporate Health & Safety Services',
-    image: null,
-    imagePlaceholder: 'Corporate wellness scene — placeholder until final photo is available.',
+    image: trainingImg,
+    isPlaceholder: true,
     text: 'BN Coaching & Health provides professional health- and safety-oriented services for companies that invest in the long-term health, physical resilience, and work capacity of their employees. These services are designed for organizations facing physical, repetitive, or stress-related workplace demands and aim to reduce injury risks, improve physical awareness, and support sustainable employee well-being.',
     bulletLabel: 'May include:',
     bullets: [
@@ -114,8 +115,8 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: 'collaborative',
     title: 'Collaborative Training & Coaching',
-    image: null,
-    imagePlaceholder: 'Joint session of both trainers in action — placeholder until final photo is available.',
+    image: bookImg,
+    isPlaceholder: true,
     text: 'For selected clients, training and coaching at BN Coaching & Health can be expanded through collaboration with a highly experienced professional from the bodybuilding and performance training scene. This collaborative approach allows for an even deeper level of specialization, particularly in performance-oriented training, advanced physique development, and competition preparation. Depending on individual goals, clients may benefit from combined expertise, different technical perspectives, and complementary coaching strengths. Collaborative training is not a standard program. It is offered selectively, based on training level, objectives, and commitment.',
     bulletLabel: 'This option may include:',
     bullets: [

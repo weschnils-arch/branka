@@ -24,18 +24,18 @@ export function ServicesIndexPage() {
               className="group relative rounded-2xl overflow-hidden bg-white border border-[#E8E2DA]/60 shadow-[0_2px_8px_rgba(110,98,89,0.04)] hover:shadow-[0_16px_40px_rgba(110,98,89,0.12)] transition-all duration-500"
             >
               <div className="aspect-[16/10] relative overflow-hidden bg-[#F5F0EB]">
-                {s.image ? (
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    style={{ filter: 'saturate(0.82) contrast(1.06) brightness(0.96) sepia(0.08)' }}
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-[#E8E2DA] via-[#D8CFC4] to-[#9A9F7A]/40 flex items-center justify-center">
-                    <span className="text-[13px] tracking-[0.12em] uppercase text-[#6E6259]/70">{s.title}</span>
-                  </div>
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  style={{ filter: 'saturate(0.82) contrast(1.06) brightness(0.96) sepia(0.08)' }}
+                  loading="lazy"
+                />
+                {s.isPlaceholder && (
+                  <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#2A2622]/75 backdrop-blur-sm text-[10px] font-semibold tracking-[0.12em] uppercase text-[#FBFAF8] border border-[#FBFAF8]/20">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8B94A]" />
+                    Placeholder
+                  </span>
                 )}
               </div>
               <div className="p-7 md:p-8">

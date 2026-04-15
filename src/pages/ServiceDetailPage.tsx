@@ -23,19 +23,17 @@ export function ServiceDetailPage() {
         </h1>
 
         <div className="relative overflow-hidden rounded-2xl mb-12 shadow-[0_16px_40px_rgba(110,98,89,0.1)]">
-          {service.image ? (
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-[360px] md:h-[520px] object-cover"
-              style={{ filter: 'saturate(0.82) contrast(1.06) brightness(0.96) sepia(0.08)' }}
-            />
-          ) : (
-            <div className="w-full h-[360px] md:h-[520px] bg-gradient-to-br from-[#E8E2DA] via-[#D8CFC4] to-[#9A9F7A]/40 flex items-center justify-center">
-              <span className="text-[13px] tracking-[0.12em] uppercase text-[#6E6259]/70 px-6 text-center max-w-[520px]">
-                {service.imagePlaceholder}
-              </span>
-            </div>
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-[360px] md:h-[520px] object-cover"
+            style={{ filter: 'saturate(0.82) contrast(1.06) brightness(0.96) sepia(0.08)' }}
+          />
+          {service.isPlaceholder && (
+            <span className="absolute top-5 right-5 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#2A2622]/75 backdrop-blur-sm text-[11px] font-semibold tracking-[0.12em] uppercase text-[#FBFAF8] border border-[#FBFAF8]/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E8B94A]" />
+              Placeholder
+            </span>
           )}
         </div>
 
