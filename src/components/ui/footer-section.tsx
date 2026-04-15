@@ -64,9 +64,23 @@ const sections: Section[] = [
 
 export function Footer() {
   return (
-    <footer className="relative w-full bg-[#2A2622] text-[#FBFAF8]">
-      <div className="relative mx-auto max-w-[1280px] rounded-t-[24px] md:rounded-t-[40px] border-t border-[#FBFAF8]/10 px-6 py-14 md:px-10 lg:px-20 lg:py-20 bg-[radial-gradient(35%_140px_at_50%_0%,rgba(154,159,122,0.18),transparent)]">
-        <div className="absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#9A9F7A]/40 blur" />
+    <footer className="relative w-full bg-gradient-to-b from-[#1F1C19] to-[#2A2622] text-[#FBFAF8] pt-12 md:pt-20">
+      {/* Glass card with large rounded top */}
+      <div
+        className="relative mx-auto max-w-[1180px] overflow-hidden rounded-t-[32px] md:rounded-t-[56px] border border-b-0 border-[#FBFAF8]/12 px-6 py-14 md:px-12 lg:px-16 lg:py-20
+          bg-[radial-gradient(40%_160px_at_50%_0%,rgba(232,220,200,0.14),transparent)]
+          before:absolute before:inset-0 before:rounded-t-[32px] md:before:rounded-t-[56px] before:bg-[#FBFAF8]/[0.035] before:backdrop-blur-xl before:-z-10
+          shadow-[inset_0_1px_0_rgba(251,250,248,0.08),0_-20px_60px_-20px_rgba(154,159,122,0.18)]"
+      >
+        {/* Top hairline accent */}
+        <div className="absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#9A9F7A]/50 blur-[1px]" />
+        {/* Soft inner glow along top edge */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#FBFAF8]/[0.06] to-transparent" />
+        {/* Grain for organic feel */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-overlay"
+          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundSize: '128px' }}
+        />
 
         {/* Top grid: identity + link sections */}
         <div className="grid w-full gap-10 xl:grid-cols-3 xl:gap-8">
